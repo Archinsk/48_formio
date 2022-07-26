@@ -27,91 +27,366 @@ Formio.createForm(
 let arr = {
   components: [
     {
-      extTypeCheckbox: false,
-      epgu_selected_vs: {},
-      input: true,
-      dataGridLabel: false,
-      tableView: true,
-      smev_req: {},
-      require: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
-      label: "Name",
-      type: "textfield",
-      key: "textField",
-    },
-    {
-      extTypeCheckbox: false,
-      epgu_selected_vs: {},
-      input: true,
-      dataGridLabel: false,
-      tableView: true,
-      smev_req: {},
-      require: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
-      label: "Last name",
-      type: "textfield",
-      key: "textField1",
-      validate: {
-        required: true,
-      },
-    },
-    {
-      allowUserAssign: false,
-      extTypeCheckbox: false,
-      epgu_selected_vs: {},
-      widget: "choicesjs",
-      data: {
-        values: [
-          {
-            label: "",
-            value: "",
+      "extTypeCheckbox": false,
+      "epgu_selected_vs": {},
+      "components": [
+        {
+          "extTypeCheckbox": false,
+          "epgu_selected_vs": {},
+          "components": [
+            {
+              "extTypeCheckbox": false,
+              "epgu_selected_vs": {},
+              "input": false,
+              "columns": [
+                {
+                  "pull": 0,
+                  "components": [
+                    {
+                      "input": true,
+                      "dataGridLabel": false,
+                      "hideOnChildrenHidden": false,
+                      "tableView": true,
+                      "labelWidth": 25,
+                      "disabled": true,
+                      "require": [
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {}
+                      ],
+                      "label": "Номер",
+                      "type": "textfield",
+                      "key": "params_handler_application"
+                    }
+                  ],
+                  "offset": 0,
+                  "size": "md",
+                  "width": 2,
+                  "push": 0
+                },
+                {
+                  "pull": 0,
+                  "components": [
+                    {
+                      "input": true,
+                      "dataGridLabel": false,
+                      "hideOnChildrenHidden": false,
+                      "tableView": true,
+                      "disabled": true,
+                      "require": [
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {}
+                      ],
+                      "labelWidth": 10,
+                      "label": "Статус",
+                      "type": "textfield",
+                      "key": "params_handler_state_string"
+                    }
+                  ],
+                  "offset": 0,
+                  "size": "md",
+                  "width": 3,
+                  "push": 0
+                },
+                {
+                  "pull": 0,
+                  "components": [
+                    {
+                      "extTypeCheckbox": false,
+                      "epgu_selected_vs": {},
+                      "enableMaxDateInput": false,
+                      "widget": {
+                        "minDate": null,
+                        "enableTime": false,
+                        "format": "dd.MM.yyyy",
+                        "displayInTimezone": "viewer",
+                        "noCalendar": false,
+                        "type": "calendar",
+                        "locale": "ru",
+                        "time_24hr": false,
+                        "allowInput": true,
+                        "minuteIncrement": 1,
+                        "mode": "single",
+                        "useLocaleSettings": false,
+                        "maxDate": null,
+                        "disableWeekdays": false,
+                        "disableWeekends": false,
+                        "hourIncrement": 1
+                      },
+                      "dataGridLabel": false,
+                      "hideOnChildrenHidden": false,
+                      "format": "dd.MM.yyyy",
+                      "enableTime": false,
+                      "tableView": false,
+                      "datePicker": {
+                        "disableWeekdays": false,
+                        "disableWeekends": false
+                      },
+                      "require": [
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {}
+                      ],
+                      "labelWidth": 26,
+                      "label": "Дата",
+                      "type": "datetime",
+                      "enableMinDateInput": false,
+                      "input": true,
+                      "smev_req": {},
+                      "disabled": true,
+                      "placeholder": "ДД.ММ.ГГГГ",
+                      "key": "params_handler_application_start",
+                      "esiaKey": {}
+                    }
+                  ],
+                  "size": "md",
+                  "offset": 0,
+                  "width": 3,
+                  "push": 0
+                },
+                {
+                  "pull": 0,
+                  "components": [],
+                  "size": "md",
+                  "offset": 0,
+                  "width": 4,
+                  "push": 0
+                }
+              ],
+              "dataGridLabel": false,
+              "smev_req": {},
+              "tableView": false,
+              "require": [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ],
+              "label": "Столбцы",
+              "type": "columns",
+              "key": "columns18",
+              "esiaKey": {}
+            }
+          ],
+          "collapsed": false,
+          "dataGridLabel": false,
+          "allowPrevious": false,
+          "tableView": false,
+          "require": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+          ],
+          "label": "",
+          "type": "panel",
+          "breadcrumbClickable": true,
+          "collapsible": false,
+          "buttonSettings": {
+            "cancel": true,
+            "next": true,
+            "previous": true
           },
-        ],
-        url: "https://open-newtemplate.isands.ru/api/prometheus/getDict?data=aHR0cHM6Ly9uZXd0ZW1wbGF0ZS5pc2FuZHMucnUvby90ZW1wbGF0ZS9lbnRpdHkvRGljdGlvbmFyeVBvcnRsZXRFbmRwb2ludC8/ZW50aXR5TmFtZT1kaWN0X2VudGl0eV9kZWZhdWx0X3JvbGVzJmNvbHVtbj1kaWN0X2VudGl0eV9kZWZhdWx0X3JvbGVzJmZvclNlbGVjdD10cnVl",
-      },
-      indexeddb: {
-        filter: {},
-        database: "",
-        table: "",
-      },
-      type: "select",
-      valueProperty: "value",
-      reference: false,
-      addResource: false,
-      disableLimit: false,
-      smev_req: {},
-      key: "select",
-      dataSrc: "url",
-      validate: {
-        select: false,
-      },
-      dataGridLabel: false,
-      tableView: true,
-      require: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
-      label: "dict",
-      selectedDictCode: {
-        endpoint: "DictionaryPortletEndpoint",
-        columns: [
-          {
-            name: "dict_entity_default_roles",
-            label: "Роли портала",
-            type: "STRING",
-            value: "dict_entity_default_roles",
+          "input": false,
+          "smev_req": {},
+          "disabled": true,
+          "key": "panel12",
+          "esiaKey": {},
+          "hideLabel": true
+        },
+        {
+          "extTypeCheckbox": false,
+          "epgu_selected_vs": {},
+          "input": true,
+          "dataGridLabel": false,
+          "tableView": true,
+          "smev_req": {},
+          "label": "Текстовое поле",
+          "type": "textfield",
+          "key": "textField",
+          "esiaKey": {},
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "extTypeCheckbox": false,
+          "epgu_selected_vs": {},
+          "input": true,
+          "defaultValue": "123",
+          "dataGridLabel": false,
+          "tableView": true,
+          "smev_req": {},
+          "label": "Текстовое поле",
+          "type": "textfield",
+          "key": "textField1",
+          "esiaKey": {}
+        },
+        {
+          "extTypeCheckbox": false,
+          "epgu_selected_vs": {},
+          "enableMaxDateInput": false,
+          "widget": {
+            "minDate": null,
+            "enableTime": true,
+            "format": "yyyy-MM-dd hh:mm a",
+            "displayInTimezone": "viewer",
+            "noCalendar": false,
+            "type": "calendar",
+            "locale": "ru",
+            "time_24hr": false,
+            "allowInput": true,
+            "minuteIncrement": 1,
+            "mode": "single",
+            "useLocaleSettings": false,
+            "maxDate": null,
+            "disableWeekdays": false,
+            "disableWeekends": false,
+            "hourIncrement": 1
           },
-        ],
-        name: "dict_entity_default_roles",
-        label: "Роли портала",
-        value: "dict_entity_default_roles",
+          "dataGridLabel": false,
+          "tableView": false,
+          "datePicker": {
+            "disableWeekdays": false,
+            "disableWeekends": false
+          },
+          "label": "Дата / Время",
+          "type": "datetime",
+          "enableMinDateInput": false,
+          "input": true,
+          "smev_req": {},
+          "key": "dateTime",
+          "esiaKey": {}
+        },
+        {
+          "extTypeCheckbox": false,
+          "epgu_selected_vs": {},
+          "enableMaxDateInput": false,
+          "widget": {
+            "minDate": null,
+            "enableTime": false,
+            "format": "yyyy-MM-dd",
+            "displayInTimezone": "viewer",
+            "noCalendar": false,
+            "type": "calendar",
+            "locale": "ru",
+            "time_24hr": false,
+            "allowInput": true,
+            "minuteIncrement": 1,
+            "mode": "single",
+            "useLocaleSettings": false,
+            "maxDate": null,
+            "disableWeekdays": false,
+            "disableWeekends": false,
+            "hourIncrement": 1
+          },
+          "dataGridLabel": false,
+          "format": "yyyy-MM-dd",
+          "enableTime": false,
+          "tableView": false,
+          "datePicker": {
+            "disableWeekdays": false,
+            "disableWeekends": false
+          },
+          "label": "Дата",
+          "type": "datetime",
+          "enableMinDateInput": false,
+          "input": true,
+          "smev_req": {},
+          "key": "dateTime2",
+          "esiaKey": {}
+        },
+        {
+          "enableDate": false,
+          "extTypeCheckbox": false,
+          "epgu_selected_vs": {},
+          "enableMaxDateInput": false,
+          "widget": {
+            "minDate": null,
+            "enableTime": true,
+            "format": "hh:mm a",
+            "displayInTimezone": "viewer",
+            "noCalendar": true,
+            "type": "calendar",
+            "locale": "ru",
+            "time_24hr": false,
+            "allowInput": true,
+            "minuteIncrement": 1,
+            "mode": "single",
+            "useLocaleSettings": false,
+            "maxDate": null,
+            "disableWeekdays": false,
+            "disableWeekends": false,
+            "hourIncrement": 1
+          },
+          "dataGridLabel": false,
+          "format": "hh:mm a",
+          "tableView": false,
+          "datePicker": {
+            "disableWeekdays": false,
+            "disableWeekends": false
+          },
+          "label": "Время",
+          "type": "datetime",
+          "enableMinDateInput": false,
+          "input": true,
+          "smev_req": {},
+          "key": "dateTime3",
+          "esiaKey": {}
+        }
+      ],
+      "collapsed": false,
+      "dataGridLabel": false,
+      "allowPrevious": false,
+      "tableView": false,
+      "label": "Panel",
+      "type": "panel",
+      "breadcrumbClickable": true,
+      "collapsible": false,
+      "buttonSettings": {
+        "cancel": true,
+        "next": true,
+        "previous": true
       },
-      selectedDictColumn: {
-        name: "dict_entity_default_roles",
-        label: "Роли портала",
-        type: "STRING",
-        value: "dict_entity_default_roles",
-      },
-      input: true,
-      idPath: "value",
-      isSelectDict: true,
-      selectThreshold: 0.3,
-    },
+      "input": false,
+      "smev_req": {},
+      "key": "panel",
+      "esiaKey": {}
+    }
   ],
 };
 
